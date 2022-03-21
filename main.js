@@ -5,8 +5,12 @@ import kaboom from "kaboom";
 // Initalize Kaboom
 kaboom();
 
+// Load sprites
+loadSprite("purpleman", "./assets/purpleman.png");
+
 // Add to canvas
 add([
-	text("hello"),
-	pos(120, 80),
+	sprite("purpleman"),
+	scale(2),
+	pos(20,20)
 ]);
