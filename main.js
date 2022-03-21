@@ -7,8 +7,9 @@ const numScale = 5;
 // Scale a number based on numScale, defined above
 const s = (n = 1) => n * numScale;
 
-// Initalize Kaboom
+// Initalize Kaboom and focus on canvas
 kaboom();
+focus(canvas);
 
 // Load sprites
 loadSprite("purpleman", "./assets/purpleman.png");
@@ -26,11 +27,17 @@ const player = add([
 
 // Player listeners and vars
 const numPlayerSpeed = s(200);
-onKeyDown("right", () => {
+onKeyDown(["right", "d"], () => {
 	player.move(numPlayerSpeed, 0);
 });
-onKeyDown("left", () => {
+onKeyDown(["left", "a"], () => {
 	player.move(-numPlayerSpeed, 0);
+});
+onKeyPress(["up", "w", "space"], () => {
+	player.jump(numPlayerSpeed);
+});
+onKeyPress(["down", "s"], () => {
+	player.jump(-numPlayerSpeed);
 });
 player.onCollide("dangerous", () => {
 	destroy(player);
