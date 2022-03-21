@@ -1,2 +1,2 @@
 # Kaboom Vite Setup
-This is a [Kaboom.js](https://kaboomjs.com/) starter project that uses Vite for bundling and as a dev server. In addition, SASS and an ESLint config that includes Kaboom globals are included.
+This is a [Kaboom.js](https://kaboomjs.com/) starter project that uses [Vite](https://vitejs.dev/) for bundling and as a dev server. In addition, SASS and an ESLint config that includes Kaboom globals are included.
