@@ -9,7 +9,7 @@ const s = (n = 1) => n * numScale;
 
 // Initalize Kaboom and focus on canvas
 kaboom();
-focus(canvas);
+canvas.focus();
 
 // Load sprites
 loadSprite("purpleman", "./assets/purpleman.png");
